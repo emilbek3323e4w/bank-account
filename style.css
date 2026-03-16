@@ -1,0 +1,166 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(223, 223, 223);
+    font-family: monospace;
+}
+
+.container{
+    background-color: rgb(249, 249, 249);
+    margin-top: 30px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 50px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#empty-state{
+    color: rgb(134, 134, 134);
+    font-size: 15px;
+    font-weight: 120;
+}
+
+.total-balance{
+    padding: 0 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.total-balance h3{
+    font-size: large;
+    font-weight: 600;
+
+}
+
+.transaction{
+    border-radius: 10px;
+}
+
+#transaction-items{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#input-space{
+    
+    font-family: monospace;
+    border: none;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    outline: none;
+    -moz-appearance: textfield;
+    #input-space::-webkit-outer-spin-button,
+    #input-space::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+#deposit-btn{
+    font-family: monospace;
+    width: 50%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: rgb(42, 158, 79);
+    color: aliceblue;
+}
+
+#deposit-btn:hover {
+    background-color: rgb(63, 182, 101);
+}
+
+#withdraw-btn{
+    font-family: monospace;
+    width: 50%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: rgb(169, 56, 56);
+    color: aliceblue;
+}
+
+#withdraw-btn:hover {
+    background-color: rgb(206, 79, 79);
+}
+
+.history-list-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+.history-list-header button {
+    padding: 2px 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.history-list-header .material-symbols-outlined {
+    font-size: 18px;
+}
+
+.item-details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-deposit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+#item-deposit{
+    color: rgb(42, 158, 79);
+    font-weight: 350;
+}
+
+.item-withdrawal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+#item-withdrawal{
+    color: rgb(169, 56, 56);
+    font-weight: 350;
+}

@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank account</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <div class="container">
+
+<div class="total-balance">
+        <h4>Account Balance</h4>
+        <h3>0,00 <span>$</span></h3>
+    </div>
+
+    <div class="transaction">
+        <h4>Transactions</h4>
+        <div id="transaction-items">
+            <input placeholder="Enter amount" type="number" id="input-space">
+        <div class="buttons">
+            <button id="deposit-btn">Deposit</button>
+            <button id="withdraw-btn">Withdraw</button>
+        </div>
+        </div>
+    </div>
+
+    <div id="history-list">
+        <div class="history-list-header">
+            <h4>Transaction history</h4>
+        <button><span class="material-symbols-outlined">delete</span></button>
+        </div>
+        <p id="empty-state">Transaction history is empty</p>
+
+        <div class="item-details">
+
+            <div class="item-deposit">
+                <p id="item-deposit">Deposit</p>
+                <div id="item-amount"><span>+</span>1000 <span>$</span></div>
+            </div>
+
+            <div class="item-withdrawal">
+                <p id="item-withdrawal">Withdrawal</p>
+                <div id="item-amount"> <span>-</span>200 <span>$</span></div>
+            </div>
+        </div>
+        
+    </div>
+
+    </div>
+
+    <!--Link to js file-->
+    <script src="script.js"></script>
 </body>
 </html>
