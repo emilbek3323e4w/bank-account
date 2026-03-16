@@ -51,21 +51,20 @@ body{
 }
 
 #input-space{
-    
     font-family: monospace;
-    border: none;
-    width: 100%;
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 8px;
     padding: 8px;
+    width: 100%;
     box-sizing: border-box;
     outline: none;
     -moz-appearance: textfield;
-    #input-space::-webkit-outer-spin-button,
-    #input-space::-webkit-inner-spin-button {
+}
+
+#input-space::-webkit-outer-spin-button,
+#input-space::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-    }
 }
 
 .buttons{

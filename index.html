@@ -14,7 +14,7 @@
 
 <div class="total-balance">
         <h4>Account Balance</h4>
-        <h3>0,00 <span>$</span></h3>
+        <h3 id="balance-display">0,00 <span>$</span></h3>
     </div>
 
     <div class="transaction">
@@ -31,21 +31,24 @@
     <div id="history-list">
         <div class="history-list-header">
             <h4>Transaction history</h4>
-        <button><span class="material-symbols-outlined">delete</span></button>
+        <button id="clear-btn"><span class="material-symbols-outlined">delete</span></button>
         </div>
         <p id="empty-state">Transaction history is empty</p>
 
-        <div class="item-details">
+        <div class="item-details" id="item-details">
 
-            <div class="item-deposit">
+           <!-- <div class="item-deposit">
                 <p id="item-deposit">Deposit</p>
                 <div id="item-amount"><span>+</span>1000 <span>$</span></div>
             </div>
+            -->
 
+         <!--
             <div class="item-withdrawal">
                 <p id="item-withdrawal">Withdrawal</p>
                 <div id="item-amount"> <span>-</span>200 <span>$</span></div>
             </div>
+            --> 
         </div>
         
     </div>
