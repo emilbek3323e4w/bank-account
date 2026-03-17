@@ -8,7 +8,6 @@ const emptyState = document.getElementById('empty-state')
 const errorMessage = document.getElementById('error-message')
 
 let balance = 0
-let history = []
 
 function deposit(){
     let amount = parseFloat(inputSpace.value)
@@ -20,17 +19,16 @@ function deposit(){
 
 function withdraw(){
     let amount = parseFloat(inputSpace.value)
+
+     if(balance < amount){
+        errorMessage.style.display = 'block'
+        errorMessage.textContent = 'Not enough money!'
+        return
+    }
     balance -= amount
     updateBalance()
     addToHistory('withdrawal',amount)
     clearInput()
-
-    if(balance < amount){
-        errorMessage.style.display = 'block'
-        errorMessage.textContent = 'Not enough money!'
-    }else{
-        errorMessage.style.display = 'none'
-    }
 }
 
 function clearInput(){
@@ -58,7 +56,6 @@ function addToHistory(type, amount){
 function clearHistory(){
     itemDetails.innerHTML = ''
     emptyState.style.display = 'block'
-    history.length = 0;
 }
 
 depositBtn.addEventListener('click', deposit)
