@@ -5,6 +5,64 @@ const withdrawBtn = document.getElementById('withdraw-btn')
 const clearBtn = document.getElementById('clear-btn')
 const itemDetails = document.getElementById('item-details')
 const emptyState = document.getElementById('empty-state')
+const errorMessage = document.getElementById('error-message')
 
 let balance = 0
 let history = []
+
+function deposit(){
+    let amount = parseFloat(inputSpace.value)
+    balance += amount
+    updateBalance()
+    addToHistory('deposit', amount)
+    clearInput()
+}
+
+function withdraw(){
+    let amount = parseFloat(inputSpace.value)
+    balance -= amount
+    updateBalance()
+    addToHistory('withdrawal',amount)
+    clearInput()
+
+    if(balance < amount){
+        errorMessage.style.display = 'block'
+        errorMessage.textContent = 'Not enough money!'
+    }else{
+        errorMessage.style.display = 'none'
+    }
+}
+
+function clearInput(){
+    inputSpace.value = "";
+}
+
+function updateBalance(){
+    balanceDisplay.textContent = `${balance} $`
+}
+
+function addToHistory(type, amount){
+    let newItem = document.createElement("div")
+    if(type === 'deposit'){
+    newItem.className = 'item-deposit'
+    } else {
+        newItem.className = 'item-withdrawal'
+    }
+
+    newItem.innerHTML = `<p>${type}</p><div>${amount} $</div>`
+    itemDetails.appendChild(newItem)
+
+    emptyState.style.display = 'none'
+}
+
+function clearHistory(){
+    itemDetails.innerHTML = ''
+    emptyState.style.display = 'block'
+    history.length = 0;
+}
+
+depositBtn.addEventListener('click', deposit)
+withdrawBtn.addEventListener('click', withdraw)
+clearBtn.addEventListener('click',clearHistory)
+
+

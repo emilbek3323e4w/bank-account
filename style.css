@@ -144,7 +144,7 @@ body{
     border-radius: 10px;
 }
 
-#item-deposit{
+.item-deposit p {
     color: rgb(42, 158, 79);
     font-weight: 350;
 }
@@ -159,7 +159,12 @@ body{
     border-radius: 10px;
 }
 
-#item-withdrawal{
+.item-withdrawal p {
     color: rgb(169, 56, 56);
     font-weight: 350;
+}
+#error-message {
+    color: rgb(169, 56, 56);
+    font-size: 14px;
+    display: none;
 }
